@@ -15,6 +15,9 @@
 
 const games = [];
 
+/**
+ * Global breyta til að halda utan um fjölda leikja sem eru spilaðir
+ */
 var leikur;
 
 
@@ -57,10 +60,11 @@ function play() {
 
   while (i < 1) {
 
-    const gisk = prompt('Giskaðu á tölu sem er á milli 0 og 100');
+    const gisk = prompt(`Giskaðu á tölu sem er á milli 0 og 100`);
 
     //Ef ýtt er á cancel
     if (gisk === null) {
+      alert(`Hætt í leik`);
       break;
     }
 
