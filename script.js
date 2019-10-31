@@ -32,7 +32,7 @@ function start() {
   do {
     play();
 
-    if(leikur === 0){
+    if (leikur === 0) {
       break;
     }
 
@@ -60,8 +60,6 @@ function play() {
   const random = randomNumber(1, 100);
   var i = 0;
   var count = 0;
-  
-
 
   while (i < 1) {
 
@@ -86,8 +84,8 @@ function play() {
     if (distance === 'Rétt') {
       leikur++;
       i++;
-      games[leikur-1] = count;
-      
+      games[leikur - 1] = count;
+
     }
 
   }
@@ -128,7 +126,7 @@ function calculateAverage() {
     sum = sum + games[i];
   }
 
-  return (sum/games.length);
+  return (sum / games.length);
 
 }
 
