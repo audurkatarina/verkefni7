@@ -31,6 +31,11 @@ function start() {
   leikur = 0;
   do {
     play();
+
+    if(leikur === 0){
+      break;
+    }
+
   } while (confirm("Viltu spila annan leik?"))
 
   alert(` ${getResults()} `);
@@ -55,7 +60,7 @@ function play() {
   const random = randomNumber(1, 100);
   var i = 0;
   var count = 0;
-  leikur++;
+  
 
 
   while (i < 1) {
@@ -79,6 +84,7 @@ function play() {
     alert(` ${distance} `);
 
     if (distance === 'Rétt') {
+      leikur++;
       i++;
       games[leikur-1] = count;
       
